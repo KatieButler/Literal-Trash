@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      9365,        247]
-NotebookOptionsPosition[      8636,        219]
-NotebookOutlinePosition[      8982,        234]
-CellTagsIndexPosition[      8939,        231]
+NotebookDataLength[      9609,        250]
+NotebookOptionsPosition[      8881,        222]
+NotebookOutlinePosition[      9227,        237]
+CellTagsIndexPosition[      9184,        234]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -93,7 +93,7 @@ Cell[BoxData[
   RowBox[{
    RowBox[{"(", 
     RowBox[{"14", "*", "16329325.33"}], ")"}], "+", 
-   RowBox[{"5.25", "*", " ", 
+   RowBox[{"21444.5", "*", "5.25", "*", " ", 
     RowBox[{"(", 
      FractionBox[
       SuperscriptBox["\[ExponentialE]", 
@@ -123,7 +123,8 @@ Cell[BoxData[
    3.690383945381181*^9, 3.690383948418681*^9}, 3.690384005354681*^9, 
    3.6903840482756805`*^9, {3.6903840825566807`*^9, 3.690384083264181*^9}, {
    3.690384144756181*^9, 3.690384167580181*^9}, {3.690384458325181*^9, 
-   3.690384472307681*^9}, {3.690384783936681*^9, 3.6903847853191805`*^9}}],
+   3.690384472307681*^9}, {3.690384783936681*^9, 3.6903847853191805`*^9}, {
+   3.6903863468330655`*^9, 3.6903863475931263`*^9}}],
 
 Cell[CellGroupData[{
 
@@ -143,7 +144,7 @@ Cell[BoxData[
         RowBox[{"{", 
          RowBox[{"0", ",", "5"}], "}"}], ",", 
         RowBox[{"{", 
-         RowBox[{"228610554", ",", "228610560"}], "}"}]}], "}"}]}]}], "]"}], 
+         RowBox[{"228610554", ",", "228750000"}], "}"}]}], "}"}]}]}], "]"}], 
    ",", " ", 
    RowBox[{"{", 
     RowBox[{"t", ",", "0", ",", "10"}], "}"}]}], "]"}]], "Input",
@@ -157,32 +158,33 @@ Cell[BoxData[
    3.6903843541226807`*^9, 3.690384431174181*^9}, {3.6903844841521807`*^9, 
    3.6903845220361805`*^9}, {3.690384566902681*^9, 3.6903845816976805`*^9}, {
    3.6903846330551805`*^9, 3.690384633755181*^9}, {3.690384663844681*^9, 
-   3.6903847433056808`*^9}}],
+   3.6903847433056808`*^9}, {3.6903863636224127`*^9, 3.690386486277032*^9}, {
+   3.690386523933834*^9, 3.6903865258858747`*^9}}],
 
 Cell[BoxData[
  TagBox[
   StyleBox[
-   DynamicModuleBox[{$CellContext`t$$ = 0., Typeset`show$$ = True, 
+   DynamicModuleBox[{$CellContext`t$$ = 0, Typeset`show$$ = True, 
     Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
     Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
     "\"untitled\"", Typeset`specs$$ = {{
-      Hold[$CellContext`t$$], 0, 10}}, Typeset`size$$ = {360., {98., 104.}}, 
+      Hold[$CellContext`t$$], 0, 10}}, Typeset`size$$ = {360., {96., 103.}}, 
     Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = 
-    True, $CellContext`t$217645$$ = 0}, 
+    True, $CellContext`t$228867$$ = 0}, 
     DynamicBox[Manipulate`ManipulateBoxes[
      1, StandardForm, "Variables" :> {$CellContext`t$$ = 0}, 
       "ControllerVariables" :> {
-        Hold[$CellContext`t$$, $CellContext`t$217645$$, 0]}, 
+        Hold[$CellContext`t$$, $CellContext`t$228867$$, 0]}, 
       "OtherVariables" :> {
        Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
         Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
         Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
          Typeset`skipInitDone$$}, "Body" :> Plot[
         $CellContext`f[$CellContext`x, $CellContext`t$$], {$CellContext`x, -5,
-          5}, PlotRange -> {{0, 5}, {228610554, 228610560}}], 
+          5}, PlotRange -> {{0, 5}, {228610554, 228750000}}], 
       "Specifications" :> {{$CellContext`t$$, 0, 10}}, "Options" :> {}, 
       "DefaultOptions" :> {}],
-     ImageSizeCache->{411., {144., 151.}},
+     ImageSizeCache->{411., {143., 150.}},
      SingleEvaluation->True],
     Deinitialization:>None,
     DynamicModuleValues:>{},
@@ -202,7 +204,8 @@ Cell[BoxData[
    3.6903840878916807`*^9, {3.6903841715626807`*^9, 3.690384201478181*^9}, {
    3.6903842672181807`*^9, 3.690384319422181*^9}, {3.690384360205181*^9, 
    3.690384432249181*^9}, {3.6903844985991807`*^9, 3.690384523386181*^9}, {
-   3.6903846400951805`*^9, 3.690384744103181*^9}}]
+   3.6903846400951805`*^9, 3.690384744103181*^9}, {3.690386357081889*^9, 
+   3.6903864432631407`*^9}, 3.6903865266928916`*^9}]
 }, Open  ]],
 
 Cell[BoxData[""], "Input",
@@ -240,18 +243,16 @@ Cell[CellGroupData[{
 Cell[1906, 60, 355, 10, 30, "Input"],
 Cell[2264, 72, 435, 13, 61, "Output"]
 }, Open  ]],
-Cell[2714, 88, 1828, 37, 112, "Input"],
+Cell[2714, 88, 1898, 38, 79, "Input"],
 Cell[CellGroupData[{
-Cell[4567, 129, 1357, 30, 50, "Input"],
-Cell[5927, 161, 2305, 43, 312, "Output"]
+Cell[4637, 130, 1457, 31, 50, "Input"],
+Cell[6097, 163, 2380, 44, 343, "Output"]
 }, Open  ]],
-Cell[8247, 207, 92, 1, 30, "Input"],
-Cell[8342, 210, 94, 1, 30, "Input"],
-Cell[8439, 213, 96, 1, 30, "Input"],
-Cell[8538, 216, 94, 1, 30, "Input"]
+Cell[8492, 210, 92, 1, 30, "Input"],
+Cell[8587, 213, 94, 1, 30, "Input"],
+Cell[8684, 216, 96, 1, 30, "Input"],
+Cell[8783, 219, 94, 1, 30, "Input"]
 }
 ]
 *)
-
-(* End of internal cache information *)
 
