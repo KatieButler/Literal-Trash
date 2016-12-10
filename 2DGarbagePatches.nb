@@ -1,0 +1,124 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      4258,        116]
+NotebookOptionsPosition[      3984,        102]
+NotebookOutlinePosition[      4324,        117]
+CellTagsIndexPosition[      4281,        114]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Surface", " ", "=", " ", 
+   RowBox[{"Pi", "*", " ", "A", "*", " ", "B"}]}], "  ", 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{
+    "The", " ", "area", " ", "the", " ", "gyre", " ", "circulates", " ", 
+     "around", " ", "is", " ", "roughly", " ", 
+     RowBox[{"elliptic", ".", " ", "The"}], " ", "equation", " ", "for", " ", 
+     "a", " ", "SA", " ", "of", " ", "an", " ", "ellipse", " ", "is", " ", 
+     "Surface"}], " ", "=", " ", 
+    RowBox[{"Pi", "*", "r1", "*", "r2"}]}], " ", "*)"}], 
+  " "}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"SurfaceR", " ", "=", " ", 
+   RowBox[{"pi", "*", " ", 
+    RowBox[{"r", "^", "2"}]}]}], " "}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"p", " ", "=", " ", "5.25"}], " ", 
+  RowBox[{"(*", " ", 
+   RowBox[{"Density", " ", "i", " ", "n", " ", 
+    RowBox[{"kg", "/", "km"}]}], "*)"}], " "}], "\[IndentingNewLine]", 
+ RowBox[{"  ", 
+  RowBox[{"vWestToEast", " ", "=", " ", 
+   RowBox[{"(", 
+    RowBox[{"21444.5", "*", "5.25"}], ")"}]}], " ", 
+  RowBox[{"(*", 
+   RowBox[{"Average", " ", "current", " ", "rate", " ", "in", " ", 
+    RowBox[{"kg", "/", "year"}], " ", "going", " ", "from", " ", "the", " ", 
+    "west", " ", "to", " ", "east", " ", "gyre"}], "*)"}], 
+  " "}], "\[IndentingNewLine]", 
+ RowBox[{"  ", 
+  RowBox[{"vEastToWest", " ", "=", " ", 
+   RowBox[{"(", 
+    RowBox[{"1576.8", "*", "5.25"}], ")"}]}], " ", 
+  RowBox[{"(*", 
+   RowBox[{"Average", " ", "current", " ", "rate", " ", "in", " ", 
+    RowBox[{"kg", "/", "year"}], " ", "going", " ", "from", " ", "the", " ", 
+    "east", " ", "to", " ", "west", " ", "gyre"}], "*)"}], 
+  " "}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+  "fishingNet", " ", "=", " ", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"x", " ", "=", " ", 
+    RowBox[{"x", " ", "+", " ", "1"}]}]}], " ", 
+  RowBox[{"(*", " ", 
+   RowBox[{"1", " ", "=", " ", "deltaX"}], "*)"}], " ", 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Div", "[", 
+   RowBox[{
+    RowBox[{"Grad", "[", 
+     RowBox[{"p", ",", " ", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"x1", "..."}], "xn"}], "}"}]}], "]"}], ",", " ", 
+    RowBox[{"{", "coordsys", "}"}]}], "]"}], " ", "+", " ", 
+  RowBox[{"Div", "[", 
+   RowBox[{
+    RowBox[{"V", "*", "p"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"x1", "..."}], ".."}], "xn"}], "}"}]}], "]"}], " "}]}], "Input",
+ CellChangeTimes->{{3.6903841788954997`*^9, 3.6903842071583257`*^9}, {
+   3.690384383155924*^9, 3.690384393732981*^9}, {3.6903845070073147`*^9, 
+   3.6903845603483152`*^9}, {3.690384854626315*^9, 3.6903848595073147`*^9}, {
+   3.690384951166315*^9, 3.6903850232233152`*^9}, {3.690385359142522*^9, 
+   3.69038537342595*^9}, {3.690385426344241*^9, 3.690385438601467*^9}, {
+   3.69038550164377*^9, 3.6903855064942555`*^9}, {3.6903858156447144`*^9, 
+   3.6903858337257147`*^9}, {3.6903859266787148`*^9, 3.690386094490714*^9}, 
+   3.6903862236009684`*^9, {3.6903872427418723`*^9, 3.6903872468222804`*^9}, {
+   3.6903872814357414`*^9, 3.6903873477243695`*^9}, {3.690387498117407*^9, 
+   3.6903876241085033`*^9}, {3.690387695702503*^9, 3.690387819862503*^9}, {
+   3.6903878917455034`*^9, 3.6903879277995033`*^9}, {3.6903879998425035`*^9, 
+   3.690388042829503*^9}}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.690384556379315*^9, 3.6903845572613153`*^9}}]
+},
+WindowSize->{942, 962},
+WindowMargins->{{Automatic, 0}, {Automatic, 0}},
+FrontEndVersion->"11.0 for Microsoft Windows (64-bit) (July 28, 2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 3325, 77, 240, "Input"],
+Cell[3886, 99, 94, 1, 30, "Input"]
+}
+]
+*)
+
