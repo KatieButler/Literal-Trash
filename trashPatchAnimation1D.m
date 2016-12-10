@@ -1,4 +1,3 @@
-
 function trashPatchAnimation1D()
 %% For Liv's Sanity 
 clf 
@@ -24,22 +23,39 @@ currentFromWestToEast = (21444.5*5.25); % Averaged current rates in km/year
 currentFromEastToWest = (1576.8*5.25); % Averaged current rates in km/year
                                      % Converted into kg/year using density
                                      
+
+westNormal = 1;
+eastNormal = 1; 
+
+xMin = 1;
+xMax = 10;
+yMin = 225000000;
+yMax = 230000000;
+                                     
 %time = 1; % Current time (future iterations will be in years from present.)
 
 
 %% Running code 
 
-        for i=1:10;  
+        for i=1:10;
             plot(i,westPatch,'o');
-            axis([0 10 225000000 230000000]);
-            westPatch = (westPatch + westPatchShorePollutionRate + oceanDebrisWestPollutionRate)- (diffusion + currentFromWestToEast) + currentFromEastToWest; 
+            axis([xMin xMax yMin yMax]);
+            westPatch = integral( integral(density*(-currentFromWestToEast)*westNormal, ...
+                        xMin, xMax), yMin, yMax)  + integral(integral(gradient(density*westNormal),....
+                        xMin, xMax), yMin, yMax);
+            
             hold on
         end 
 
-%         for i=1:10; subplot(eastPatch(i, 1:10), 'r'); axis([0 10e+9 0 10]); 
-%         eastPatch = (eastPatch + eastPatchShorePollutionRate + oceanDebrisEastPollutionRate)- (diffusion + currentFromEastToWest) + currentFromWestToEast; 
-%         end
-%         hold on
-        
+% %         for i=1:10;
+%             plot(i,eastPatch,'o');
+%             axis([xMin xMax yMin yMax]);
+%             eastPatch = integral( integral(density*(-currentFromEastToWest)*eastNormal, ...
+%                         xMin, xMax), yMin, yMax)  + integral(integral(gradient(density*eastNormal),....
+%                         xMin, xMax), yMin, yMax);
+%             
+%             hold on
+%         end 
+%         
 
 end 
