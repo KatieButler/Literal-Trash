@@ -29,12 +29,11 @@ currentFromEastToWest = (1576.8*5.25); % Averaged current rates in km/year
 
 %% Running code 
 
-        for i=1:10; 
-            plot(westPatch,'o')
-            axis([0 10 0 1000000000]); 
-            hold on
+        for i=1:10;  
+            plot(i,westPatch,'o');
+            axis([0 10 225000000 230000000]);
             westPatch = (westPatch + westPatchShorePollutionRate + oceanDebrisWestPollutionRate)- (diffusion + currentFromWestToEast) + currentFromEastToWest; 
-            plot(westPatch,'o');
+            hold on
         end 
 
 %         for i=1:10; subplot(eastPatch(i, 1:10), 'r'); axis([0 10e+9 0 10]); 
