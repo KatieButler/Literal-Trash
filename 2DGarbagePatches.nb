@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      4258,        116]
-NotebookOptionsPosition[      3984,        102]
-NotebookOutlinePosition[      4324,        117]
-CellTagsIndexPosition[      4281,        114]
+NotebookDataLength[      4472,        121]
+NotebookOptionsPosition[      4160,        106]
+NotebookOutlinePosition[      4500,        121]
+CellTagsIndexPosition[      4457,        118]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -69,14 +69,15 @@ Cell[BoxData[{
    RowBox[{"1", " ", "=", " ", "deltaX"}], "*)"}], " ", 
   "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
  RowBox[{
-  RowBox[{"Div", "[", 
-   RowBox[{
-    RowBox[{"Grad", "[", 
-     RowBox[{"p", ",", " ", 
-      RowBox[{"{", 
-       RowBox[{
-        RowBox[{"x1", "..."}], "xn"}], "}"}]}], "]"}], ",", " ", 
-    RowBox[{"{", "coordsys", "}"}]}], "]"}], " ", "+", " ", 
+  RowBox[{"i", " ", 
+   RowBox[{"Div", "[", 
+    RowBox[{
+     RowBox[{"Grad", "[", 
+      RowBox[{"p", ",", " ", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"x1", "..."}], "xn"}], "}"}]}], "]"}], ",", " ", 
+     RowBox[{"{", "coordsys", "}"}]}], "]"}]}], " ", "+", " ", 
   RowBox[{"Div", "[", 
    RowBox[{
     RowBox[{"V", "*", "p"}], ",", " ", 
@@ -95,10 +96,13 @@ Cell[BoxData[{
    3.6903872814357414`*^9, 3.6903873477243695`*^9}, {3.690387498117407*^9, 
    3.6903876241085033`*^9}, {3.690387695702503*^9, 3.690387819862503*^9}, {
    3.6903878917455034`*^9, 3.6903879277995033`*^9}, {3.6903879998425035`*^9, 
-   3.690388042829503*^9}}],
+   3.690388042829503*^9}, 3.690389779177348*^9, 3.6903899992623477`*^9}],
 
 Cell[BoxData[""], "Input",
- CellChangeTimes->{{3.690384556379315*^9, 3.6903845572613153`*^9}}]
+ CellChangeTimes->{{3.690384556379315*^9, 3.6903845572613153`*^9}}],
+
+Cell[BoxData["  "], "Input",
+ CellChangeTimes->{{3.690390453134348*^9, 3.6903904532393475`*^9}}]
 },
 WindowSize->{942, 962},
 WindowMargins->{{Automatic, 0}, {Automatic, 0}},
@@ -116,8 +120,9 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 3325, 77, 240, "Input"],
-Cell[3886, 99, 94, 1, 30, "Input"]
+Cell[558, 20, 3402, 78, 240, "Input"],
+Cell[3963, 100, 94, 1, 30, "Input"],
+Cell[4060, 103, 96, 1, 30, "Input"]
 }
 ]
 *)
