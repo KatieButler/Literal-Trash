@@ -66,8 +66,17 @@ y = 2;
           divgrad = divergence(dx,dy);
           divgrad = reshape(divgrad,[10000, 1]);
     end 
+
+    X1 = -2:.1:2;
+    Y1 = X1;
+    [x,y] = meshgrid(X1);
+    u = -y;
+    v = .5*x;
+    subplot(2,1,2);
+    quiver(x,y,u,v)
+
     [t,y] = ode45(@Divgrad, [0 100], U0);
-    %subplot(2,1,1);
+    subplot(2,1,1);
     for i = 1: length(t) 
         axis([-2 2 -2 2 -5 5]); %axis([xMin xMax yMin yMax]); 
         pause(.5);
@@ -75,13 +84,4 @@ y = 2;
         az = 180;
         surf(X,Y,U) 
     end 
-
-%         subplot(2,1,2); 
-%         axis([-10 10 -10 10]);
-%         V = [-y; .5*x]; 
-%         c = curl(V); 
-%         plot(t, c, 'r'); 
-%         hold on
-
-            
-end 
+end
