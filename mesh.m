@@ -10,17 +10,18 @@ for i = 1:100
 end
 
 load wind
-figure
-daspect([1,1,1]);
-view(2)
-[verts,averts] = streamslice(x,y,z,u,v,w,[],[],[5]);
-sl = streamline([verts averts]);
-axis tight manual off;
-ax = gca;
-ax.Position = [0,0,1,1];
-set(sl,'Visible','off')
-iverts = interpstreamspeed(x,y,z,u,v,w,verts,.05);
-zlim([4.9,5.1]);
-streamparticles(iverts, 200, ...
-    'Animate',15,'FrameRate',40, ...
-    'MarkerSize',10,'MarkerFaceColor',[0 .5 0])
+[sx sy sz] = meshgrid(100,20:2:50,5);
+verts = stream3(x,y,z,u,v,w,sx,sy,sz);
+sl = streamline(verts);
+view(-10.5,18)
+daspect([2 2 0.125])
+axis tight;
+set(gca,'BoxStyle','full','Box','on')
+iverts = interpstreamspeed(x,y,z,u,v,w,verts,0.01);
+set(gca,'SortMethod','childorder');
+streamparticles(iverts,15,...
+	'Animate',10,...
+	'ParticleAlignment','on',...
+	'MarkerEdgeColor','none',...
+	'MarkerFaceColor','red',...
+	'Marker','o');
