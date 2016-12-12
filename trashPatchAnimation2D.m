@@ -31,30 +31,57 @@ clf
 % 
 % 
 
-xMin = 1;
-xMax = 10;
-yMin = 1;
-yMax = 10;
-                                     
+% xMin = 1;
+% xMax = 10;
+% yMin = 1;
+% yMax = 10;
+
+x = 2; 
+y = 2; 
+
+%                                      
 %time = 1; % Current time (future iterations will be in years from present.)
 
 
 %% Running code 
 
-     for t = 1:10; 
-        F = [0.5* log(((xMin - 1)^2 + yMin^2)/((xMin + 1)^2 + yMin^2))]; %Convert to matrix 
-        [t,y] = ode45(del2(F),t,yMin);
-        subplot(2,1,1);
-        axis([-10 10 -10 10])%axis([xMin xMax yMin yMax]); 
-        plot(t, y, '*'); 
-        hold on
-          
+    X = linspace(-2, 2);
+    Y = linspace(-2, 2); 
+    U0 = zeros(100,100);
+    size(U0)
+    function res = Udipole(t,x,y)
+        res = [0.5* log(((x - 1)^2 + y^2)/((x + 1)^2 + y^2))];
+    end
+    for i = 1: 100 
+       for j = 1:100
+        U0(i,j) = Udipole(0, X(i), Y(j));
+       end
+    end 
+    U0 = reshape(U0,[10000,1]); 
+    %Convert to matrix
+    function divgrad = Divgrad(~, V)
+          size(V)
+          V = reshape(V,[100,100]);
+          [dx, dy] = gradient(V);
+          divgrad = divergence(dx,dy);
+          divgrad = reshape(divgrad,[10000, 1]);
+    end 
+    [t,y] = ode45(@Divgrad, [0 100], U0);
+    %subplot(2,1,1);
+    for i = 1: length(t) 
+        axis([-2 2 -2 2 -5 5]); %axis([xMin xMax yMin yMax]); 
+        pause(.5);
+        U = reshape(y(i,:), [100 100]);
+        az = 180;
+        surf(X,Y,U) 
+    end 
+
 %         subplot(2,1,2); 
 %         axis([-10 10 -10 10]);
 %         V = [-y; .5*x]; 
 %         c = curl(V); 
 %         plot(t, c, 'r'); 
 %         hold on
-    end
+
             
 end 
