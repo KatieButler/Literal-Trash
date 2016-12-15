@@ -46,7 +46,11 @@ function FinalFinalGarbagePatchAnimation ()
      [t,concentrationArray] = ode45(@Divgrad2, linspace(0,100), U20, options); %Taking ODE45 to solve the differential equation.
       size(concentrationArray); 
      for i = 1: length(t) 
-         axis([-4 4 -4 4 -7 7]); %axis([xMin xMax yMin yMax]); 
+         axis([-4 4 -4 4 -7 7]); %axis([xMin xMax yMin yMax]);
+         title('Oceanic Microplastic Concentration')
+         xlabel('X position')
+         ylabel('Y position')
+         zlabel('Concentration') 
          pause(.1);
          U1 = reshape(concentrationArray(i,:), [100 100]);
          surf(linspace(-2,2),linspace(-2,2),U1,'EdgeColor','none')
